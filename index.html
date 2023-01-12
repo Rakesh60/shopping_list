@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+
+</head>
+<body>
+    <h1>Shoppping List</h1>
+    <input type="text" id="userinput">
+    <button type="button" id="button">Enter</button>
+    <ol type="1">
+       
+    </ol>
+
+    <script>
+            var button=document.getElementById("button");
+            button.style.background="yellow";
+            var input=document.getElementById("userinput");
+            var ol=document.querySelector("ol");
+            
+            button.addEventListener("click",function(){
+                if(input.value.length>0){
+                    var list=document.createElement("li");
+                    list.appendChild(document.createTextNode(input.value));
+                    ol.appendChild(list);
+                    input.value="";
+                   
+
+                }
+            }
+            
+            )
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
